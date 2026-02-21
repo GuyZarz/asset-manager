@@ -98,11 +98,6 @@ export function AssetFormPage() {
           setSymbolValidation(res.data.valid ? "valid" : "invalid");
           if (res.data.valid && res.data.name && !name) {
             setName(res.data.name);
-            addToast({
-              type: "success",
-              message: `Symbol validated: ${res.data.name}`,
-              duration: 2000,
-            });
           }
         } catch (err) {
           setSymbolValidation("invalid");
